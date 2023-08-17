@@ -1,23 +1,14 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { DashboardIcon, HomeIcon } from '@radix-ui/react-icons';
-import { PieChart, PlayIcon, SettingsIcon } from 'lucide-react';
-import Logo from 'public/logo.svg';
 
 import { useSidebar } from 'components/context/sidebar-provider';
 import { Separator } from 'components/ui/separator';
 
 import { cn } from 'lib/utils';
-
-const dashboardLinks = [
-	{ name: 'Overview', href: '/', Icon: HomeIcon },
-	{ name: 'Page 1', href: '/page1', Icon: HomeIcon },
-	{ name: 'Page 2', href: '/page2', Icon: HomeIcon },
-];
 
 const SidebarLink = ({ active, children, href }: { active: boolean; children: any; href: string }) => {
 	return (
