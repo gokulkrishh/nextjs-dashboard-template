@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 import { PopoverContent, PopoverTrigger } from '@radix-ui/react-popover';
+import { CheckCircle2, MessageSquarePlus } from 'lucide-react';
 
-// import { CheckCircle2, MessageSquarePlus } from 'lucide-react';
 import { Button } from 'components/ui/button';
 import { Popover } from 'components/ui/popover';
 import { Textarea } from 'components/ui/textarea';
@@ -24,7 +24,7 @@ export default function Feedback({ className, showDatePicker }: { className?: st
 			<PopoverTrigger>
 				<Button className={`${className}`} asChild size={'sm'}>
 					<span>
-						{/* <MessageSquarePlus className="mr-[6px] mt-[2px] h-4 w-4" /> */}
+						<MessageSquarePlus className="mr-[6px] mt-[2px] h-4 w-4" />
 						Feedback
 					</span>
 				</Button>
@@ -54,7 +54,7 @@ export default function Feedback({ className, showDatePicker }: { className?: st
 					</form>
 				) : (
 					<div className="flex h-[140px] flex-col items-center justify-center">
-						{/* <CheckCircle2 className="mb-2 h-12 w-12 text-green-500" /> */}
+						<CheckCircle2 className="mb-2 h-12 w-12 text-green-500" />
 						<span className="mb-1 mt-1 block text-sm font-semibold text-primary">Got your feedback</span>
 						<span className="mb-3 block text-sm font-normal text-muted-foreground">
 							Thanks for improving the product.

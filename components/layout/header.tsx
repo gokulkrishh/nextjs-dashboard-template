@@ -48,7 +48,6 @@ export default function LayoutHeader({ title, showDatePicker = false }: { title:
 				<div className="flex items-center justify-between sm:mt-0">
 					{showDatePicker ? (
 						<div className="date-picker mr-0 flex w-full items-center sm:mr-4">
-							{/* <span className="mr-2 hidden text-xs font-semibold uppercase md:inline-block">Showing:</span> */}
 							<DatePicker />
 						</div>
 					) : null}

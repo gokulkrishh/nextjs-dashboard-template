@@ -1,12 +1,14 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+import { baseUrl } from 'lib/urls';
+
 export async function middleware(req: NextRequest) {
 	const res = NextResponse.next();
 	const hostname = req.headers.get('host');
 	const url = req.nextUrl;
 
-	const currentHost = hostname?.replace(`.mydashboard.vercel.app`, '');
+	const currentHost = hostname?.replace(`.${baseUrl}`, '');
 
 	if (currentHost === 'app') {
 		if (url.pathname === '/signin' || url.pathname === '/signup') {
